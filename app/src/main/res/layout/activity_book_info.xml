@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:paddingTop="40dp"
+    android:paddingBottom="40dp"
+    android:background="@android:color/transparent"
+    tools:context=".activity.BookOrderInfoActivity">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/rectangle_left"
+                android:orientation="vertical"
+                android:layout_width="90dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:text="书号"
+                    android:id="@+id/tvLabelIsbn"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:text="书名"
+                    android:id="@+id/tvLabelBookName"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:text="作者"
+                    android:id="@+id/tvLabelAuthor"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:gravity="center_vertical"
+                    android:text="价格"
+                    android:id="@+id/tvLabelPrice"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:text="出版社"
+                    android:id="@+id/tvLabelPublisher"
+                    android:layout_column="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_d"
+                    android:text="版次"
+                    android:id="@+id/tvLabelEdition"
+                    android:layout_column="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/rectangle_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvIsbn" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvBookName" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvAuthor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvPrice" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvPublisher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:paddingRight="@dimen/table_padding_right_left"
+                    android:paddingLeft="@dimen/table_padding_right_left"
+                    android:paddingTop="@dimen/table_padding_top_bottom"
+                    android:paddingBottom="@dimen/table_padding_top_bottom"
+                    android:textColor="@color/gray_d"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/tvEdition" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:id="@+id/pbLoading"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

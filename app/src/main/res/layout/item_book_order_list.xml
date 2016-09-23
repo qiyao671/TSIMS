@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/selector_touch_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:id="@+id/cbIsOrdered"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft ="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:maxWidth="260dp"
+        android:text="课程名"
+        android:id="@+id/tvCourseName"
+        android:layout_toRightOf="@id/cbIsOrdered"
+        android:layout_toEndOf="@id/cbIsOrdered"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:id="@+id/ivBook"
+        android:src="@mipmap/ic_book"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvCourseName"
+        android:layout_toRightOf="@id/cbIsOrdered"
+        android:layout_toEndOf="@id/cbIsOrdered"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/secondary_text"
+        android:typeface="sans"
+        android:text="书名"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:maxWidth="200dp"
+        android:id="@+id/tvBookName"
+        android:layout_marginLeft="3dp"
+        android:layout_alignBottom="@id/ivBook"
+        android:layout_toRightOf="@id/ivBook" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/primary"
+        android:text="价格"
+        android:id="@+id/tvPrice"
+        android:layout_alignBottom="@+id/tvBookName"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="3dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="￥"
+        android:id="@+id/tvYuan"
+        android:textColor="@color/primary"
+        android:layout_alignBottom="@+id/tvPrice"
+        android:layout_toLeftOf="@+id/tvPrice"
+        android:layout_toStartOf="@+id/tvPrice" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/ivOrdered"
+        android:visibility="gone"
+        android:src="@mipmap/hook"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/cbIsOrdered" />
+
+
+</RelativeLayout>
