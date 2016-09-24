@@ -69,7 +69,9 @@ public abstract class BaseActivity extends AppCompatActivity {
                             .onPositive(new MaterialDialog.SingleButtonCallback() {
                                 @Override
                                 public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                    startActivity(LoginActivity.class);
+                                    Intent intent = new Intent(BaseActivity.this, LoginActivity.class);
+                                    intent.putExtra(LoginActivity.KEY_IS_SWITCH, true);
+                                    startActivity(intent);
                                 }
                             })
                             .negativeText("取消")

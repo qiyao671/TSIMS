@@ -34,6 +34,7 @@ public class LoginActivity extends BaseActivity {
     private static final String KEY_IS_AUTO_LOGIN = "autoLogin";
     private static final String KEY_ACCOUNT = "account";
     private static final String KEY_PASSWORD = "pwd";
+    public static final String KEY_IS_SWITCH = "isSwitch";
 
     @Bind(R.id.etAccount)
     EditText etAccount;
@@ -65,7 +66,7 @@ public class LoginActivity extends BaseActivity {
         getIbLogin().setVisibility(View.GONE);
 
         etAccount.setText(sp.getString(KEY_ACCOUNT, ""));
-        if (UserData.getUserNum() == null) {    //非切换账号
+        if (UserData.getUserNum() == null) {    //内存中无用户数据
             //若为记住密码
             if (sp.getBoolean(KEY_IS_REMEMBER_PASSWORD, false)) {
                 cbRmbPwd.setChecked(true);
@@ -76,7 +77,14 @@ public class LoginActivity extends BaseActivity {
                     checkLogin(etAccount.getText().toString(), etPassword.getText().toString());
                 }
             }
+        } else {
+            boolean isSwitch = getIntent().getBooleanExtra(KEY_IS_SWITCH, false);
+            if (!isSwitch) {
+                startActivity(MainActivity.class);
+                this.finish();
+            }
         }
+
     }
 
     @Override
